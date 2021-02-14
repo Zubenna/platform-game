@@ -1,13 +1,13 @@
-import Phaser from 'phaser';
-import { gameConfig } from './Config/config';
-
-
+import 'phaser';
+import config from './Config/config';
+import GameScene from './Scenes/GameScene';
+ 
 class Game extends Phaser.Game {
   constructor () {
-    super(gameConfig);
-    const model = new Model();
+    super(config);
+    this.scene.add('Game', GameScene);
+    this.scene.start('Game');
   }
 }
-
+ 
 window.game = new Game();
-
