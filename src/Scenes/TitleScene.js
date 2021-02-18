@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { gameConfig } from '../Config/config';
+import Button from '../Objects/Button';
 
 export default class TitleScene extends Phaser.Scene {
   constructor() {
@@ -23,5 +24,20 @@ export default class TitleScene extends Phaser.Scene {
       this.model.bgMusicPlaying = true;
       this.sys.game.globals.bgMusic = this.bgMusic;
     }
+  }
+  centerButton(gameObject, offset = 0) {
+    Phaser.Display.Align.In.Center(
+      gameObject,
+      this.add.zone(gameConfig.width / 2,
+        gameConfig.height / 2 - offset * 100,
+        gameConfig.width, gameConfig.height),
+    );
+  }
+
+  centerButtonText(gameText, gameButton) {
+    Phaser.Display.Align.In.Center(
+      this.gameText,
+      gameButton,
+    );
   }
 }
