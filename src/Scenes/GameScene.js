@@ -201,7 +201,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }
   }
-  
+
   jump() {
     if ((!this.dying) && (this.player.body.touching.down
       || (this.playerJumps > 0 && this.playerJumps < gameOptions.jumps))) {
@@ -215,4 +215,71 @@ export default class GameScene extends Phaser.Scene {
     }
   }
 
+  update() {
+    if (this.player.y > gameConfig.height) {
+      this.scene.start('GameOver', { user: gameConfig.user, score: this.score });
+    }
+
+    this.player.x = gameOptions.playerStartPosition;
+
+    let minDistance = gameConfig.width;
+    let rightmostPlatformHeight = 0;
+    this.platformGroup.getChildren().forEach(function func4(platform) {
+      const platformDistance = gameConfig.width - platform.x - platform.displayWidth / 2;
+      if (platformDistance < minDistance) {
+        minDistance = platformDistance;
+        rightmostPlatformHeight = platform.y;
+      }
+      if (platform.x < -platform.displayWidth / 2) {
+        this.platformGroup.killAndHide(platform);
+        this.platformGroup.remove(platform);
+      }
+    }, this);
+
+    this.coinGroup.getChildren().forEach(function func5(coin) {
+      if (coin.x < -coin.displayWidth / 2) {
+        this.coinGroup.killAndHide(coin);
+        this.coinGroup.remove(coin);
+      }
+    }, this);
+
+    this.fireGroup.getChildren().forEach(function func6(fire) {
+      if (fire.x < -fire.displayWidth / 2) {
+        this.fireGroup.killAndHide(fire);
+        this.fireGroup.remove(fire);
+      }
+    }, this);
+
+    this.mountainGroup.getChildren().forEach(function func7(mountain) {
+      if (mountain.x < -mountain.displayWidth) {
+        const rightmostMountain = this.getRightmostMountain();
+        mountain.x = rightmostMountain + Phaser.Math.Between(100, 350);
+        mountain.y = gameConfig.height + Phaser.Math.Between(0, 100);
+        mountain.setFrame(Phaser.Math.Between(0, 3));
+        if (Phaser.Math.Between(0, 1)) {
+          mountain.setDepth(1);
+        }
+      }
+    }, this);
+
+    if (minDistance > this.nextPlatformDistance) {
+      const nextPlatformWidth = Phaser.Math.Between(
+        gameOptions.platformSizeRange[0],
+        gameOptions.platformSizeRange[1],
+      );
+      const platformRandomHeight = gameOptions.platformHeighScale * Phaser.Math.Between(
+        gameOptions.platformHeightRange[0],
+        gameOptions.platformHeightRange[1],
+      );
+      const nextPlatformGap = rightmostPlatformHeight + platformRandomHeight;
+      const minPlatformHeight = gameConfig.height * gameOptions.platformVerticalLimit[0];
+      const maxPlatformHeight = gameConfig.height * gameOptions.platformVerticalLimit[1];
+      const nextPlatformHeight = Phaser.Math.Clamp(nextPlatformGap,
+        minPlatformHeight,
+        maxPlatformHeight);
+      this.addPlatform(nextPlatformWidth,
+        gameConfig.width + nextPlatformWidth / 2,
+        nextPlatformHeight);
+    }
+  }
 }
