@@ -201,4 +201,18 @@ export default class GameScene extends Phaser.Scene {
       }
     }
   }
+  
+  jump() {
+    if ((!this.dying) && (this.player.body.touching.down
+      || (this.playerJumps > 0 && this.playerJumps < gameOptions.jumps))) {
+      if (this.player.body.touching.down) {
+        this.playerJumps = 0;
+      }
+      this.player.setVelocityY(gameOptions.jumpForce * -1);
+      this.playerJumps += 1;
+
+      this.player.anims.play('jump', false);
+    }
+  }
+
 }
