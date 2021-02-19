@@ -3,9 +3,9 @@ import Phaser from 'phaser';
 const gameConfig = {
   type: Phaser.AUTO,
   parent: 'phaser-example',
-  width: 1000,
-  height: 680,
-  backgroundColor: 0x0c88c7,
+  width: 1270,
+  height: 650,
+  backgroundColor: 0x0c87,
   dom: {
     createContainer: true,
   },
@@ -16,13 +16,13 @@ const gameConfig = {
 };
 
 const gameOptions = {
-  platformSpeedRange: [300, 300],
+  platformSpeedRange: [290, 290],
 
-  mountainSpeed: 80,
+  mountainSpeed: 50,
 
   spawnRange: [80, 300],
 
-  platformSizeRange: [90, 300],
+  platformSizeRange: [80, 290],
 
   platformHeightRange: [-5, 5],
 
@@ -30,9 +30,9 @@ const gameOptions = {
 
   platformVerticalLimit: [0.4, 0.8],
 
-  playerGravity: 900,
+  playerGravity: 800,
 
-  jumpForce: 400,
+  jumpForce: 420,
 
   playerStartPosition: 200,
 
