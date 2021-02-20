@@ -114,11 +114,9 @@ export default class PreloaderScene extends Phaser.Scene {
       frameHeight: 70,
     });
 
-    // mountains are a sprite sheet made by 512x512 pixels
-    this.load.spritesheet('mountain', 'assets/mountain.png', {
-      frameWidth: 512,
-      frameHeight: 512,
-    });
+    // landscape is an image
+
+    this.load.image('sky', 'assets/landscape.png');
     this.load.audio('bgMusic', ['assets/sound/TownTheme.mp3']);
     this.load.audio('pickup', ['assets/sound/pickup.mp3']);
     this.load.audio('dead', ['assets/sound/dead.mp3']);

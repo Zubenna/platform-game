@@ -16,21 +16,19 @@ const gameConfig = {
 };
 
 const gameOptions = {
-  platformSpeedRange: [290, 290],
-
-  mountainSpeed: 50,
+  platformSpeedRange: [300, 300],
 
   spawnRange: [80, 300],
 
-  platformSizeRange: [80, 290],
+  platformSizeRange: [90, 300],
 
-  platformHeightRange: [-5, 5],
+  platformHeightRange: [-3, 4],
 
   platformHeighScale: 20,
 
   platformVerticalLimit: [0.4, 0.8],
 
-  playerGravity: 800,
+  playerGravity: 900,
 
   jumpForce: 420,
 

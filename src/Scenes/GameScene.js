@@ -14,7 +14,8 @@ export default class GameScene extends Phaser.Scene {
   }
 
   create() {
-    this.mountainGroup = this.add.group();
+    const land = this.add.image(635, 325, 'sky');
+    land.scale = 2.2;
 
     this.platformGroup = this.add.group({
       removeCallback(platform) {
@@ -52,8 +53,6 @@ export default class GameScene extends Phaser.Scene {
         fire.scene.fireGroup.add(fire);
       },
     });
-
-    this.addMountains();
 
     this.addedPlatforms = 0;
 
@@ -109,30 +108,7 @@ export default class GameScene extends Phaser.Scene {
       this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
   }
 
-  addMountains() {
-  const rightmostMountain = this.getRightmostMountain();
-  if (rightmostMountain < gameConfig.width * 2) {
-    const mountain = this.physics.add.sprite(rightmostMountain + Phaser.Math.Between(100, 350), gameConfig.height + Phaser.Math.Between(0, 100), 'mountain');
-    mountain.setOrigin(0.5, 1);
-    mountain.body.setVelocityX(gameOptions.mountainSpeed * -1);
-    this.mountainGroup.add(mountain);
-      if (Phaser.Math.Between(0, 1)) {
-        mountain.setDepth(1);
-      }
-    mountain.setFrame(Phaser.Math.Between(0, 3));
-    this.addMountains();
-    }
-  }
-
-  getRightmostMountain() {
-  let rightmostMountain = -200;
-  this.mountainGroup.getChildren().forEach((mountain) => {
-  rightmostMountain = Math.max(rightmostMountain, mountain.x);
-  });
-    return rightmostMountain;
-  }
-
-  addPlatform(platformWidth, posX, posY) {
+    addPlatform(platformWidth, posX, posY) {
     this.addedPlatforms += 1;
     let platform;
     if (this.platformPool.getLength()) {
@@ -236,33 +212,7 @@ export default class GameScene extends Phaser.Scene {
       }
     }, this);
 
-    this.coinGroup.getChildren().forEach(function func5(coin) {
-      if (coin.x < -coin.displayWidth / 2) {
-        this.coinGroup.killAndHide(coin);
-        this.coinGroup.remove(coin);
-      }
-    }, this);
-
-    this.fireGroup.getChildren().forEach(function func6(fire) {
-      if (fire.x < -fire.displayWidth / 2) {
-        this.fireGroup.killAndHide(fire);
-        this.fireGroup.remove(fire);
-      }
-    }, this);
-
-    this.mountainGroup.getChildren().forEach(function func7(mountain) {
-      if (mountain.x < -mountain.displayWidth) {
-        const rightmostMountain = this.getRightmostMountain();
-        mountain.x = rightmostMountain + Phaser.Math.Between(100, 350);
-        mountain.y = gameConfig.height + Phaser.Math.Between(0, 100);
-        mountain.setFrame(Phaser.Math.Between(0, 3));
-        if (Phaser.Math.Between(0, 1)) {
-          mountain.setDepth(1);
-        }
-      }
-    }, this);
-
-    if (minDistance > this.nextPlatformDistance) {
+      if (minDistance > this.nextPlatformDistance) {
       const nextPlatformWidth = Phaser.Math.Between(
         gameOptions.platformSizeRange[0],
         gameOptions.platformSizeRange[1],
