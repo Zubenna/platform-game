@@ -9,6 +9,7 @@ import Model from './Model';
 import CreditsScene from './Scenes/CreditsScene';
 import LoginScene from './Scenes/LoginScene';
 import leaderBoardScene from './Scenes/LeaderBoardScene';
+import GameOverScene from './Scenes/GameOverScene';
 
 
 class Game extends Phaser.Game {
