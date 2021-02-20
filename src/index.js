@@ -6,7 +6,10 @@ import PreloaderScene from './Scenes/PreloaderScene';
 import TitleScene from './Scenes/TitleScene';
 import OptionsScene from './Scenes/OptionsScene';
 import Model from './Model';
+import CreditsScene from './Scenes/CreditsScene';
 import LoginScene from './Scenes/LoginScene';
+import leaderBoardScene from './Scenes/LeaderBoardScene';
+
 
 class Game extends Phaser.Game {
   constructor() {
@@ -17,8 +20,10 @@ class Game extends Phaser.Game {
     this.scene.add('Preloader', PreloaderScene);
     this.scene.add('Login', LoginScene);
     this.scene.add('Title', TitleScene);
-    this.scene.add('Options', OptionsScene);
+    this.scene.add('Credits', CreditsScene);
     this.scene.add('Game', GameScene);
+    this.scene.add('LeaderBoard', leaderBoardScene);
+    this.scene.add('Options', OptionsScene);
     this.scene.start('Boot');
   }
 }
