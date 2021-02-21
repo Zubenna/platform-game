@@ -38,15 +38,54 @@ Get a local copy of the file. Clone with HTTPS following the steps below.
 ```
 git clone https://github.com/Zubenna/platform-game.git
 ```
-## Access project folders 
-```
-cd my-todo-list-app, then, cd dist.
-```
-- Click on index.html to display the application on the browser.
-- Text all application features.
+## Access Project Folders 
+- Depending on where the game files are downloaded to, either Hard Disk(HDD), Desktop or Documents directory in your computer after completing the step above.
+- Click on the folder platform-game to open it.
+- Inside the folder, right-click and click on terminal or cmd depending on your Operating System to open it.
 
+## Set Up Game Locally in Your Computer
+- In the cmd or terminal, type the command below;
+```
+npm install
+```
+- Wait for some time to install all the game packages.
+- Once installation is completed, you will see message like '23 packages has been added', 'audited 1335 packages in 37.888s' etc.
+
+- Now, type the command below in your cmd or terminal to start the game server. Wait for some time.
+```
+npm run start
+```
+- Once the server is fully started, you will see the message 'webpack: Compiled successfully' at the end. At this time the game server is fully running and the game is ready to be played. The game interface might be loaded automatically this time, If not follow the next step.
+- In your browser, Chrome, Mozilla Firefox etc., copy and paste the url below into your browser address bar and press enter from your keyboard.
+```
+http://localhost:8000/
+```
+- The game interface is loaded and Login page is displayed as shown in the picture above.
+- Enter your name and press enter. The game option screen is displayed as shown in the second picture above.
+    - Click Play to play the game.
+    - Click Options to enable or disable sound and background music.
+    - Click Credits to see the name of the developer.
+- If Play is clicked, the game playing environment as shown in the last picture above is displayed and you can start playing the game.
+
+## Game Summary
+>This is an endless runner game where players run over some platforms and jump from one platform to another.
+>The burning fires are presented as obstacles which must be dodged in order to continue the game.
+>There are also coins which can be collected to increase the score.  
+>The game ends once the user falls down the platform or gets burned by the fire.
+
+## How To Play
+```
+The rules are simple
+1. Click once to jump over to another platform while running.
+2. Click twice for double jump.
+3. Jump and dodge the fire to stay alive.
+4. Jump on the platforms and do not fall down.
+5. Collect the coins to increase your score.
+6. Once the game is over, the score is displayed.
+
+```
 ## Testing With Jest
-The folder modules in the src folder contains all the tests written for this project. Functions in the addGroupName.js and manageTasks.js are tested using two different test files. The testing framework used is Jest. About 29 different tests have been written for this project by mocking the actual implementation. You can run the test at the root of the project by opening the command prompt and typing the command below:
+The test folder is in the src folder. It contains all the tests written for this project. Functions in different scenes are tested using various test files. The testing framework used is Jest. About 16 different tests have been written for this project by mocking the actual implementation. You can run the test at the root of the project by opening the command prompt or terminal and typing the command below:
 ```
  npm run test
 ``` 
@@ -56,9 +95,9 @@ The folder modules in the src folder contains all the tests written for this pro
 ## Built With
 - JavaScript
 - Webpack
-- HTML
-- CSS
-- Bootstrap 4
+- HTML5, CSS3
+- Phaser 3
+- Leaderboard API
 - Jest for testing
 
 ## Author
@@ -68,16 +107,22 @@ The folder modules in the src folder contains all the tests written for this pro
 - Twitter: [@zubenna](https://twitter.com/zubenna)
 - Linkedin: [nnamdi-emelu](https://www.linkedin.com/in/nnamdi-emelu/)
 
-##  Contributing
+## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Zubenna/my-todo-list-app/issues)
+Feel free to check the [issues page](https://github.com/Zubenna/platform-game/issues)
 
-## Show your support
+## 👍 Show Your Support
+Give a ⭐️ if you like this project!
 
-Give a star if you like this project!
+## :clap: Acknowledgements
 
-## Acknowledgments
-- Project originally taken from The Odin Project
-- Project inspired by Microverse Program
+- [Microverse](https://www.microverse.org/)
+- [Phaser](https://phaser.io/)
+- [OpenGameArt](https://opengameart.org/)
+- [Game Art 2D](https://www.gameart2d.com/freebies.html)
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
