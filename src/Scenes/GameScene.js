@@ -76,36 +76,37 @@ export default class GameScene extends Phaser.Scene {
         }
       }, null, this);
 
-      this.physics.add.overlap(this.player, this.coinGroup, function func2(player, coin) {
-      this.pickupMusic = this.sound.add('pickup', { volume: 0.5, loop: false });
-      this.pickupMusic.play();
-      this.tweens.add({
-        targets: coin,
-        y: coin.y - 100,
-        alpha: 0,
-        duration: 800,
-        ease: 'Cubic.easeOut',
-        callbackScope: this,
-        onComplete() {
-          this.score += 1;
-          this.scoreText.setText(`Score: ${this.score}`);
-          this.coinGroup.killAndHide(coin);
-          this.coinGroup.remove(coin);
-          },
-        });
-      }, null, this);
-      this.physics.add.overlap(this.player, this.fireGroup, function func3() {
-        this.dieMusic = this.sound.add('dead', { volume: 0.5, loop: false });
-        this.dieMusic.play();
-        this.dying = true;
-        this.player.anims.play('dead', false);
-        this.player.body.setVelocityY(-200);
-        this.physics.world.removeCollider(this.platformCollider);
-      }, null, this);
+    this.physics.add.overlap(this.player, this.coinGroup, function func2(player, coin) {
+    this.pickupMusic = this.sound.add('pickup', { volume: 0.5, loop: false });
+    this.pickupMusic.play();
+    this.tweens.add({
+      targets: coin,
+      y: coin.y - 100,
+      alpha: 0,
+      duration: 800,
+      ease: 'Cubic.easeOut',
+      callbackScope: this,
+      onComplete() {
+        this.score += 1;
+        this.scoreText.setText(`Score: ${this.score}`);
+        this.coinGroup.killAndHide(coin);
+        this.coinGroup.remove(coin);
+      },
+    });
+    }, null, this);
 
-      this.input.on('pointerdown', this.jump, this);
+    this.physics.add.overlap(this.player, this.fireGroup, function func3() {
+    this.dieMusic = this.sound.add('dead', { volume: 0.5, loop: false });
+    this.dieMusic.play();
+    this.dying = true;
+    this.player.anims.play('dead', false);
+    this.player.body.setVelocityY(-200);
+    this.physics.world.removeCollider(this.platformCollider);
+    }, null, this);
 
-      this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+    this.input.on('pointerdown', this.jump, this);
+
+    this.scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
   }
 
     addPlatform(platformWidth, posX, posY) {
