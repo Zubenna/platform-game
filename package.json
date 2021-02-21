@@ -7,7 +7,7 @@
     "test": "jest",
     "watch": "jest --watchAll",
     "build": "webpack",
-    "start": "npm run build && webpack-dev-server host='0.0.0.0', port=os.environ.get('PORT', '5000')"
+    "start": "npm run build && webpack-dev-server --host=0.0.0.0 --port=$PORT --disable-host-check"
   },
   "repository": {
     "type": "git",
