@@ -22,16 +22,21 @@ This project is to build a platform game - a type of endless runner game. I envi
 - Runner can collect coins
 - Runner can dodge fire danger
 - Background sound and music can be enabled or disabled.
-- Score are displayed at the end of game
-- Menu options are displayed to allow player make choice.
+- Score is displayed at the end of the game
+- Menu options are displayed to allow players to make choices.
 - Webpack compiles ES6 JavaScript code
 
 ## Project SetUp
 
-Get a local copy of the file. Clone with HTTPS using the command below.
+Get a local copy of the file. Clone with HTTPS following the steps below.
+### For Windows
+- In your search box, type cmd, click on cmd to open the command prompt.
+### For Linux, Mac OS
+- In your search box, type terminal, click on terminal to launch it.
 
+- Copy and paste the command below in your terminal and press enter from your keyboard.
 ```
-git clone https://github.com/Zubenna/my-todo-list-app.git
+git clone https://github.com/Zubenna/platform-game.git
 ```
 ## Access project folders 
 ```
