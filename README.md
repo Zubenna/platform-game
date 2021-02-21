@@ -2,6 +2,9 @@
 
 This project is to build a platform game - a type of endless runner game. I envisaged a platform where an individual will keep running on the platform continuously. It is assumed to be a type of military training ground. The platform has some broken parts and a ditch below it. When the individual or player gets to that broken part, he jumps over to the next platform. If he could not jump on time or did not jump at all, he falls into the ditch and that is the end of the game. If he succeeds in jumping, he continues the run. In the process of running, valuable items in the form of coins appear for him to pick. If he succeeded in collecting the coins, his score is incremented. On the order hand, there is danger in the form of fire that appears from time to time. This runner is expected to dodge the fire danger. If the player fails to dodge the fire, he would be consumed and that marks the end of the game.
 
+## Game Design Document (GDD)
+The GDD is located in the docs folder.
+
 ## Preview
 
 ## Login Page
@@ -69,7 +72,7 @@ http://localhost:8000/
 ## Game Summary
 >This is an endless runner game where players run over some platforms and jump from one platform to another.
 >The burning fires are presented as obstacles that must be dodged to continue the game.
-> some coins can be collected to increase the score.  
+>some coins can be collected to increase the score.  
 >The game ends once the user falls down the platform or gets burned by the fire.
 
 ## How To Play
@@ -77,10 +80,11 @@ http://localhost:8000/
 The rules are simple
 1. Click once to jump over to another platform while running.
 2. Click twice for a double jump.
-3. Jump and dodge the fire to stay alive.
-4. Jump on the platforms and do not fall.
-5. Collect the coins to increase your score.
-6. Once the game is over, the score is displayed.
+3. Press down the mouse to maintain steady jump.
+4. Jump and dodge the fire to stay alive.
+5. Jump on the platforms and do not fall.
+6. Collect the coins to increase your score.
+7. Once the game is over, the score is displayed.
 
 ```
 ## Testing With Jest
