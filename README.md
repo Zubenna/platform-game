@@ -93,7 +93,8 @@ The test folder is in the src folder. It contains all the tests written for this
  npm run test
 ``` 
 ## Live Version
-- [Launch App](https://zubenna.github.io/my-todo-list-app/)
+Play game online by clicking 'Launch Game' as shown below.
+- [Launch Game](https://zubenna-platform-game.herokuapp.com/)
 
 ## Built With
 - JavaScript
