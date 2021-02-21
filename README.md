@@ -32,7 +32,7 @@ Get a local copy of the file. Clone with HTTPS following the steps below.
 ### For Windows
 - In your search box, type cmd, click on cmd to open the command prompt.
 ### For Linux, Mac OS
-- In your search box, type terminal, click on terminal to launch it.
+- In your search box, type terminal, click on the terminal to launch it.
 
 - Copy and paste the command below in your terminal and press enter from your keyboard.
 ```
@@ -49,37 +49,36 @@ git clone https://github.com/Zubenna/platform-game.git
 npm install
 ```
 - Wait for some time to install all the game packages.
-- Once installation is completed, you will see message like '23 packages has been added', 'audited 1335 packages in 37.888s' etc.
+- Once the installation is completed, you will see messages like '23 packages has been added, 'audited 1335 packages in 37.888s' etc.
 
 - Now, type the command below in your cmd or terminal to start the game server. Wait for some time.
 ```
 npm run start
 ```
 - Once the server is fully started, you will see the message 'webpack: Compiled successfully' at the end. At this time the game server is fully running and the game is ready to be played. The game interface might be loaded automatically this time, If not follow the next step.
-- In your browser, Chrome, Mozilla Firefox etc., copy and paste the url below into your browser address bar and press enter from your keyboard.
+- In your browser, Chrome, Mozilla Firefox, etc., copy and paste the URL below into your browser address bar and press enters from your keyboard.
 ```
 http://localhost:8000/
 ```
-- The game interface is loaded and Login page is displayed as shown in the picture above.
-- Enter your name and press enter. The game option screen is displayed as shown in the second picture above.
+- The game interface is loaded and the Login page is displayed as shown in the picture above.
+- Enter your name and press enter. The game options screen is displayed as shown in the second picture above.
     - Click Play to play the game.
     - Click Options to enable or disable sound and background music.
     - Click Credits to see the name of the developer.
 - If Play is clicked, the game playing environment as shown in the last picture above is displayed and you can start playing the game.
-
 ## Game Summary
 >This is an endless runner game where players run over some platforms and jump from one platform to another.
->The burning fires are presented as obstacles which must be dodged in order to continue the game.
->There are also coins which can be collected to increase the score.  
+>The burning fires are presented as obstacles that must be dodged to continue the game.
+> some coins can be collected to increase the score.  
 >The game ends once the user falls down the platform or gets burned by the fire.
 
 ## How To Play
 ```
 The rules are simple
 1. Click once to jump over to another platform while running.
-2. Click twice for double jump.
+2. Click twice for a double jump.
 3. Jump and dodge the fire to stay alive.
-4. Jump on the platforms and do not fall down.
+4. Jump on the platforms and do not fall.
 5. Collect the coins to increase your score.
 6. Once the game is over, the score is displayed.
 
