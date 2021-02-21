@@ -20,7 +20,7 @@ const gameOptions = {
 
   spawnRange: [80, 300],
 
-  platformSizeRange: [100, 300],
+  platformSizeRange: [250, 300],
 
   platformHeightRange: [-3, 3],
 

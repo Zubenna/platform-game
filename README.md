@@ -3,7 +3,7 @@
 This project is to build a platform game - a type of endless runner game. I envisaged a platform where an individual will keep running on the platform continuously. It is assumed to be a type of military training ground. The platform has some broken parts and a ditch below it. When the individual or player gets to that broken part, he jumps over to the next platform. If he could not jump on time or did not jump at all, he falls into the ditch and that is the end of the game. If he succeeds in jumping, he continues the run. In the process of running, valuable items in the form of coins appear for him to pick. If he succeeded in collecting the coins, his score is incremented. On the order hand, there is danger in the form of fire that appears from time to time. This runner is expected to dodge the fire danger. If the player fails to dodge the fire, he would be consumed and that marks the end of the game.
 
 ## Game Design Document (GDD)
-The GDD is located in the docs folder.
+The GDD can be found [here](docs/GDD.md)
 
 ## Preview
 
@@ -106,7 +106,7 @@ The test folder is in the src folder. It contains all the tests written for this
 ## Author
 
 👤 **Nnamdi Emelu**
-- Github: [@zubenna](https://github.com/zubenna)
+- Github: [zubenna](https://github.com/zubenna)
 - Twitter: [@zubenna](https://twitter.com/zubenna)
 - Linkedin: [nnamdi-emelu](https://www.linkedin.com/in/nnamdi-emelu/)
 
