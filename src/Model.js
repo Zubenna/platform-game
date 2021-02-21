@@ -16,7 +16,7 @@ export default class Model {
   set soundOn(value) {
     this.soundPlaying = value;
   }
-  
+
   get soundOn() {
     return this.soundPlaying;
   }

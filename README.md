@@ -4,30 +4,26 @@ This project is to build a platform game - a type of endless runner game. I envi
 
 ## Preview
 
-## Home Page, Desktop view
-![image](images/desktop-form.png)
+## Login Page
+![image](images/game-login.png)
 
-## Task Display, Desktop view
-![image](images/desktop-tasks.png)
+## Game Option Display
+![image](images/game-option-display.png)
 
-## Mobile view One
-![image](images/mobile-view-one.png)
+## Select Game Option
+![image](images/game-options-select.png)
 
-## Mobile view Two
-![image](images/mobile-view-two.png)
-
-## Mobile view Three
-![image](images/mobile-view-three.png)
-
+## Playing Game
+![image](images/playing-game.png)
 
 ## Features 
-
-- Users can create a task group.
-- User can delete the task group. 
-- User can create tasks for a selected group.
-- Each task can be edited and deleted
-- Group tasks can be sorted by due-date and priority
-- The completed task can be highlighted
+- Player can log in to the game using his name
+- Runner can jump ditches
+- Runner can collect coins
+- Runner can dodge fire danger
+- Background sound and music can be enabled or disabled.
+- Score are displayed at the end of game
+- Menu options are displayed to allow player make choice.
 - Webpack compiles ES6 JavaScript code
 
 ## Project SetUp
