@@ -8,16 +8,16 @@ The GDD can be found [here](docs/GDD.md)
 ## Preview
 
 ## Login Page
-![image](images/game-login.png)
+![image](assets/images/game-login.png)
 
 ## Game Option Display
-![image](images/game-option-display.png)
+![image](assets/images/game-option-display.png)
 
 ## Select Game Option
-![image](images/game-options-select.png)
+![image](assets/images/game-options-select.png)
 
 ## Playing Game
-![image](images/playing-game.png)
+![image](assets/images/playing-game.png)
 
 ## Features 
 - Player can log in to the game using his name
@@ -80,7 +80,7 @@ http://localhost:8000/
 The rules are simple
 1. Click once to jump over to another platform while running.
 2. Click twice for a double jump.
-3. Press down the mouse to maintain steady jump.
+3. Press down the mouse to maintain a steady jump.
 4. Jump and dodge the fire to stay alive.
 5. Jump on the platforms and do not fall.
 6. Collect the coins to increase your score.
@@ -118,7 +118,7 @@ Contributions, issues, and feature requests are welcome!
 Feel free to check the [issues page](https://github.com/Zubenna/platform-game/issues)
 
 ## 👍 Show Your Support
-Give a ⭐️ if you like this project!
+Kindly star ⭐️ this project, if you like it!
 
 ## :clap: Acknowledgements
 

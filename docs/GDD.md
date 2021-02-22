@@ -12,6 +12,9 @@ The stipulated time for this project was followed according to the suggested mil
 - Day 4: Making the player jump, double jump, and adding fire as an obstacle and coins as collectible items.
 - Day 5: Prepare leaderboard feature with leaderboard API, testing game, fixing bugs, etc.
 
+## Game Control (Mouse)
+This game is designed to be controlled using a mouse. For this project, the mouse serves as the game console. If the mouse is clicked once, the runner jumps. If the mouse is clicked twice in quick succession, the runner jumps twice (double jump). This takes double the force and velocity of a single jump. If the mouse is pressed down and held for a while, the runner will maintain a steady jump.
+
 ## Game Levels
 There are no specific levels in the game, since it is the infinite runner game, the player is expected to run as far as possible jumping over the platforms, dodging the obstacles(fires), and collecting the coins.
 

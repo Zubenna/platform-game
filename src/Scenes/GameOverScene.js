@@ -51,7 +51,7 @@ export default class GameOverScene extends Phaser.Scene {
       'blueButton1',
       'blueButton2',
       'Leaderboard',
-      'LeaderBoard',
+      'Leaderboard',
     );
 
     Phaser.Display.Align.In.Center(
