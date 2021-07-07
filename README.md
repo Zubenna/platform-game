@@ -94,7 +94,7 @@ The test folder is in the src folder. It contains all the tests written for this
 ``` 
 ## Live Version
 Play game online by clicking 'Launch Game' as shown below.
-- [Launch Game](https://zubenna-platform-game.herokuapp.com/)
+- [Launch Game]())
 
 ## Built With
 - JavaScript
